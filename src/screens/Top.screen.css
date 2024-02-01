@@ -1,0 +1,24 @@
+#top-container {
+    background-color: black;
+    color: white;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#top-title {
+    margin-top: 0;
+    color: greenyellow;
+}
+
+#top-description {
+    margin: 10px;
+}
+
+#top-notice {
+    margin-top: 50vh;
+}
+
+#top-credit {
+    text-align: center;
+}

@@ -1,0 +1,8 @@
+.void {
+    width: 100vw;
+    height: 200vh;
+  }
+  
+  .hidden-link {
+    cursor: pointer;
+  }
