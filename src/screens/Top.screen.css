@@ -12,13 +12,24 @@
 }
 
 #top-description {
-    margin: 10px;
+    margin: 20px;
 }
 
 #top-notice {
-    margin-top: 50vh;
+    margin: 10px;
+    position: fixed;
+    bottom: 10vh;
+}
+
+#top-notice p {
+    font-size: small;
+    margin: 0;
 }
 
 #top-credit {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
     text-align: center;
 }
