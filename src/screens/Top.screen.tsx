@@ -7,7 +7,7 @@ export const TopScreen = () => {
       <h1 id="top-title">隠しリンク</h1>
       <div id="top-description">
         <p>
-          <Link to="/pages/0">このリンク</Link>
+          <Link to="/pages/1">このリンク</Link>
           の先にあるページ群はWeb上で偶然発見されました。
         </p>
         <p>

@@ -6,10 +6,9 @@ import { near } from "../helpers/geometry.helper";
 import { parseParameter } from "../helpers/url.helper";
 import "./Page.screen.css";
 
-const targetX = (rand: MyRandom) => Math.abs(rand.next()) % window.innerWidth;
-const targetY = (rand: MyRandom) =>
-  Math.abs(rand.next()) % (window.innerHeight * 2);
-const colorDiff = (rand: MyRandom) => Math.abs(rand.next()) % 10;
+const targetX = (rand: MyRandom) => rand.nextUnder(window.innerWidth);
+const targetY = (rand: MyRandom) => rand.nextUnder(window.innerHeight * 2);
+const colorDiff = (rand: MyRandom) => rand.nextUnder(10);
 
 const scrollToTop = () => {
   window.scrollTo({
