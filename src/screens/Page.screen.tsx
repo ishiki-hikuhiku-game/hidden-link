@@ -1,5 +1,5 @@
 import { MouseEventHandler, useCallback, useState } from "react";
-import { novel1 } from "../assets/novel";
+import { randomHtml } from "../assets/assets";
 import { MyRandom } from "../helpers/random.helper";
 import { useNavigate, useParams } from "react-router-dom";
 import { near } from "../helpers/geometry.helper";
@@ -26,6 +26,7 @@ export const PageScreen = () => {
   const { pageId } = useParams<PathParams>();
   // 乱数を生成機を作成
   const seed = parseParameter(pageId);
+  // 注意：この定数をuseMemoすると、状態が持ち越しされるので再レンダリング時に結果が変わる。
   const rand = new MyRandom(seed);
 
   // 一つ目の隠しリンクの作成
@@ -88,6 +89,8 @@ export const PageScreen = () => {
   const red = colorDiff(rand);
   const green = colorDiff(rand);
   const blue = colorDiff(rand);
+
+  const __html = randomHtml(rand);
   return (
     <div
       className={isOnLink ? "void hidden-link" : "void"}
@@ -97,8 +100,7 @@ export const PageScreen = () => {
         background: `linear-gradient(rgb(${red},${green},${blue}), gray)`,
       }}
       dangerouslySetInnerHTML={{
-        __html: `
-      <!-- ${novel1} -->`,
+        __html,
       }}
     />
   );

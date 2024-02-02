@@ -6,3 +6,7 @@
   .hidden-link {
     cursor: pointer;
   }
+
+  p {
+    color: white;
+  }
