@@ -5,10 +5,12 @@
 const A = 48271;
 
 /**
+ * 2^31 - 1
+ * 
  * Park & Milleが「より良い他の選択肢が無いのならばこれを使うべき」とした実装の定数。
  * @see https://ja.wikipedia.org/wiki/%E7%B7%9A%E5%BD%A2%E5%90%88%E5%90%8C%E6%B3%95
  */
-const BASE = 4294967295;
+const BASE = 2147483647;
 
 /**
  * JavaScriptが提供する乱数はシードを指定できないので、再現性がない（毎回結果が変わる）。
@@ -29,7 +31,7 @@ const BASE = 4294967295;
  * XorShiftでの実装の例として以下のサイトがある。XorShiftで試すときに参考にした。
  * @see https://sbfl.net/blog/2017/06/01/javascript-reproducible-random/
  */
-export class MyRandom {
+export class LCGRandom {
   /**
    * 前回の乱数
    */

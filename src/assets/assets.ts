@@ -1,7 +1,12 @@
-import { MyRandom } from "../helpers/random.helper";
-
 const comment = `
-<!-- ここになんか小説を書く。 -->
+<!-- 
+あなたは開発者ツールを使って、実際に表示されているHTMLの構造を確認した。
+ソースを表示しただけよりは少し構造が見えるようになった。
+しかし、隠しリンクにあたるタグは見当たらない。
+どうやら、隠しリンクは、HTMLにではなく、完全にJavaScriptによって作られているようだ。
+しかし、JavaScriptを確認しようにも、人間に読めるものではなかった。
+あなたは、せめて何か情報がないかと思って、「コンソール」もしくは「Console」という機能を確認してみる。
+-->
 `;
 
 /**
@@ -26,11 +31,19 @@ const image1 = `
 const image2 = `
 <p>ありがとうございます。見つかりました。</p>
 <img src="/photo2.jpg" />
+<img class="hidden" src="/photo3.jpg" />
 `;
 
-const assets = ["", image1, image2, comment];
+/**
+ * open_jtalkを使って作った読み上げをAudacityを使って加工した。
+ */
+const sound = `
+<audio controls src="/voice.wav" />
+`;
 
-export const randomHtml = (random: MyRandom) => {
-    const randomValue = random.nextUnder(assets.length); 
+const assets = ["", comment, "", "", image2, "", image1, sound];
+
+export const randomHtml = (seed: number) => {
+    const randomValue = seed % assets.length;
     return assets[randomValue];
 }

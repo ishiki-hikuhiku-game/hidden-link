@@ -1,12 +1,21 @@
 .void {
-    width: 100vw;
-    height: 200vh;
-  }
-  
-  .hidden-link {
-    cursor: pointer;
-  }
+  width: 100vw;
+  height: 200vh;
+}
 
-  p {
-    color: white;
-  }
+.hidden-link {
+  cursor: pointer;
+}
+
+p {
+  color: white;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  top: 3.5em;
+  left: 0;
+}
