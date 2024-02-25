@@ -35,11 +35,19 @@ export const TopScreen = () => {
         <p>
           それ以外の意味では、この作品はフェイクドキュメンタリー「Q」、その他実在の人物・組織・出来事とは一切関係ありません。
         </p>
+        <p>
+          <a href="https://github.com/ishiki-hikuhiku-game/hidden-link">
+            ソースコード
+          </a>
+        </p>
       </div>
       <div id="top-credit">
         <hr />
         <p>
-          制作：意識ひくひくゲーム制作同好会
+          制作：
+          <a href="https://github.com/ishiki-hikuhiku-game">
+            意識ひくひくゲーム制作同好会
+          </a>
           <br />
           （代表：淡中圏 &lt;tannakaken@gmail.com&gt;）
         </p>
