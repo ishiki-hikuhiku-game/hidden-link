@@ -18,7 +18,7 @@ const comment = `
  */
 const image1 = `
 <p>この子を見かけませんでしたか。</p>
-<img src="/photo1.jpg" />
+<img src="/photo1.jpg" width="80%" />
 `;
 
 /**
@@ -30,8 +30,8 @@ const image1 = `
  */
 const image2 = `
 <p>ありがとうございます。見つかりました。</p>
-<img src="/photo2.jpg" />
-<img class="hidden" src="/photo3.jpg" />
+<img src="/photo2.jpg" width="80%" />
+<img class="hidden" src="/photo3.jpg" width="80%" />
 `;
 
 /**
